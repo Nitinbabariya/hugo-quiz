@@ -6,11 +6,11 @@ page: true
 
 # Hugo Quiz
 
-A hugo shortcode for writing quizzes with a markdown-like syntax: https://github.com/bonartm/hugo-quiz.
+A hugo shortcode for writing quizzes with a markdown-like syntax: https://github.com/nitinbabariya/hugo-quiz.
 
-**Try out the live code editor: https://bonartm.github.io/quizdown-live-editor/**
+**Try out the live code editor: https://nitinbabariya.github.io/quiztest-live-editor/**
 
-{{< quizdown >}}
+{{< quiztest >}}
 
 ---
 primary_color: steelblue
@@ -58,4 +58,4 @@ $$
 - [ ] yes
 - [ ] no
 
-{{< /quizdown >}}
+{{< /quiztest >}}

@@ -1,28 +1,28 @@
 # hugo-quiz
 
-![build and deploy](https://github.com/bonartm/hugo-quiz/workflows/build%20and%20deploy/badge.svg)
+![build and deploy](https://github.com/nitinbabariya/hugo-quiz/workflows/build%20and%20deploy/badge.svg)
 
-> A hugo shortcode for writing quizzes with a markdown-like syntax, called [quizdown](https://github.com/bonartm/quizdown-js). 
+> A hugo shortcode for writing quizzes with a markdown-like syntax, called [quiztest](https://github.com/nitinbabariya/quiztest-js). 
 
-### 🚀 See the [demo](https://bonartm.github.io/hugo-quiz/) based on the hugo learn theme or try the interactive [quizdown live editor](https://bonartm.github.io/quizdown-live-editor/).
+1### 🚀 See the [demo](https://nitinbabariya.github.io/hugo-quiz/) based on the hugo learn theme or try the interactive [quiztest live editor](https://nitinbabariya.github.io/quiztest-live-editor/).
 
 - supports markdown text formatting, images and syntax highlighting.
-- different [quiz-types](https://github.com/bonartm/quizdown-js/blob/main/docs/syntax.md): single-choice, multiple-choice, sequence.
+- different [quiz-types](https://github.com/nitin/quiztest-js/blob/main/docs/syntax.md): single-choice, multiple-choice, sequence.
 - support for hints and explanations.
-- [options](https://github.com/bonartm/quizdown-js/blob/main/docs/options.md) for color theme, question shuffling, localization.
+- [options](https://github.com/nitinbabariya/quiztest-js/blob/main/docs/options.md) for color theme, question shuffling, localization.
 - mobile friendly with touch support for all question types.
 
 
 ## Installation
 
-Quizdown is a javascript library which is developed in [a separated project](https://github.com/bonartm/quizdown-js/). hugo-quiz uses a simple shortcode to use quizdown with Hugo. For the library, you can either use a link to a CDN or download and link to the local `quizdown.js` file.
+Quiztest is a javascript library which is developed in [a separated project](https://github.com/nitinbabariya/quiztest-js/). hugo-quiz uses a simple shortcode to use quiztest with Hugo. For the library, you can either use a link to a CDN or download and link to the local `quiztest.js` file.
 
 
 ### Hugo-learn theme
 
-1. To install and setup the **library**, copy the file `demo/layouts/partials/custom-header.html` into your local `layouts/partials/` folder. This inserts the nescessary javascript code inside the `head` section of the hugo website.
-2. To install the **shortcode**, copy the content from `demo/layouts/shortcodes/quizdown.html`  into your local `layouts/shortcodes/` folder.
-3. **Currently, the `--minify` flag of the hugo command causes issues with the raw quizdown-markdown code. Please remove the flag when building your website or use the following option in your `config.toml`**:
+1. To install and setup the **library**, copy the file `demo/layouts/partials/custom-header.html` into your local `layouts/partials/` folder. This inserts the necessary javascript code inside the `head` section of the hugo website.
+2. To install the **shortcode**, copy the content from `demo/layouts/shortcodes/quiztest.html`  into your local `layouts/shortcodes/` folder.
+3. **Currently, the `--minify` flag of the hugo command causes issues with the raw quiztest-markdown code. Please remove the flag when building your website or use the following option in your `config.toml`**:
 
   ```toml
   [minify]
@@ -37,15 +37,15 @@ If your theme does not offer a `custom-header.html` you need to add the library 
 <head>
     ...
   <script 
-     src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+     src="https://cdn.jsdelivr.net/npm/quiztest@latest/public/build/quiztest.js">
   </script>
   <script 
-      src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+      src="https://cdn.jsdelivr.net/npm/quiztest@latest/public/build/extensions/quiztestKatex.js">
   </script>
   <script 
-      src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+      src="https://cdn.jsdelivr.net/npm/quiztest@latest/public/build/extensions/quiztestHighlight.js">
   </script>
-  <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+  <script>quiztest.register(quiztestHighlight).register(quiztestKatex).init()</script> 
   ...
 
 </head>
@@ -53,7 +53,7 @@ If your theme does not offer a `custom-header.html` you need to add the library 
 
 
 
-## Usage  (edit example in [🚀 quizdown editor](https://bonartm.github.io/quizdown-live-editor/?code=---%0Aprimary_color%3A%20orange%0Asecondary_color%3A%20lightgray%0Atext_color%3A%20black%0Ashuffle_questions%3A%20false%0A---%0A%0A%23%23%20The%20sound%20of%20dog%0A%0A---%0Ashuffle_answers%3A%20false%0A---%0A%0AWhat%20do%20dogs%20sound%20like%3F%0A%0A%3E%20Some%20hint%0A%0A-%20%5B%20%5D%20yes%0A-%20%5B%20%5D%20no%0A-%20%5B%20%5D%20%60self.sound%20%3D%20%22meow%22%60%0A-%20%5Bx%5D%20wuff%0A%0A%23%23%20Put%20the%20%5Bdays%5D(https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDay)%20in%20order!%0A%0A%3E%20Monday%20is%20the%20*first*%20day%20of%20the%20week.%0A%0A1.%20Monday%0A2.%20Tuesday%0A3.%20Wednesday%0A4.%20Friday%0A5.%20Saturday%20))
+## Usage  (edit example in [🚀 quiztest editor](https://nitinbabariya.github.io/quiztest-editor/?code=---%0Aprimary_color%3A%20orange%0Asecondary_color%3A%20lightgray%0Atext_color%3A%20black%0Ashuffle_questions%3A%20false%0A---%0A%0A%23%23%20The%20sound%20of%20dog%0A%0A---%0Ashuffle_answers%3A%20false%0A---%0A%0AWhat%20do%20dogs%20sound%20like%3F%0A%0A%3E%20Some%20hint%0A%0A-%20%5B%20%5D%20yes%0A-%20%5B%20%5D%20no%0A-%20%5B%20%5D%20%60self.sound%20%3D%20%22meow%22%60%0A-%20%5Bx%5D%20wuff%0A%0A%23%23%20Put%20the%20%5Bdays%5D(https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDay)%20in%20order!%0A%0A%3E%20Monday%20is%20the%20*first*%20day%20of%20the%20week.%0A%0A1.%20Monday%0A2.%20Tuesday%0A3.%20Wednesday%0A4.%20Friday%0A5.%20Saturday%20))
 
 Write quizzes in plain markdown in any of your files in the `content` directory:
 
@@ -61,7 +61,7 @@ Write quizzes in plain markdown in any of your files in the `content` directory:
 
 # Hugo Quiz
 
-{{< quizdown >}}
+{{< quiztest >}}
 
 ---
 primary_color: orange
@@ -82,6 +82,7 @@ What do dogs sound like?
 
 - [ ] yes
 - [ ] no
+- [ ] no
 - [ ] `self.sound = "meow"`
 - [x] wuff
 
@@ -94,18 +95,18 @@ What do dogs sound like?
 3. Wednesday
 4. Friday
 5. Saturday  
-{{< /quizdown >}}
+{{< /quiztest >}}
 ```
 
 ## 📚 Documentation
 
 > The quizzes are for fun and not for serious assessment. Since everything is rendered on the client side, the hints and solutions to the questions become visible once javascript is disabled in the browser.
 
-Check out the [documentation](https://github.com/bonartm/quizdown-js/blob/main/docs/) on the main project page. You might be interested in:
+Check out the [documentation](https://github.com/nitinbabariya/quiztest-js/blob/main/docs/) on the main project page. You might be interested in:
 
-- different [quiz-types](https://github.com/bonartm/quizdown-js/blob/main/docs/syntax.md): single-choice, multiple-choice, sequence.
-- support for [hints and explanations](https://github.com/bonartm/quizdown-js/blob/main/docs/syntax.md#hints-and-comments).
-- [options](https://github.com/bonartm/quizdown-js/blob/main/docs/options.md) for color theme, question shuffling, localization.
+- different [quiz-types](https://github.com/nitinbabariya/quiztest-js/blob/main/docs/syntax.md): single-choice, multiple-choice, sequence.
+- support for [hints and explanations](https://github.com/nitinbabariya/quiztest-js/blob/main/docs/syntax.md#hints-and-comments).
+- [options](https://github.com/nitinbabariya/quiztest-js/blob/main/docs/options.md) for color theme, question shuffling, localization.
 
 ![](hugo-quiz-demo-v0.4.0.png)
 
@@ -114,7 +115,7 @@ Check out the [documentation](https://github.com/bonartm/quizdown-js/blob/main/d
 
 Tested with version `0.80.0` of Hugo and the Hugo Learn theme.
 
-Visit https://bonartm.github.io/hugo-quiz/ for a live demo based on the [hugo-learn](https://themes.gohugo.io/theme/hugo-theme-learn/en) theme. You can also view a local version of the demo. 
+Visit https://nitinbabariya.github.io/hugo-quiz/ for a live demo based on the [hugo-learn](https://themes.gohugo.io/theme/hugo-theme-learn/en) theme. You can also view a local version of the demo. 
 
 First download the theme:
 
