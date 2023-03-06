@@ -1,5 +1,5 @@
 # hugo-quiz
-
+ 
 ![build and deploy](https://github.com/nitinbabariya/hugo-quiz/workflows/build%20and%20deploy/badge.svg)
 
 > A hugo shortcode for writing quizzes with a markdown-like syntax, called [quiztest](https://github.com/nitinbabariya/quiztest-js). 
